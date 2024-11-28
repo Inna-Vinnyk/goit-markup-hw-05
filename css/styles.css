@@ -89,7 +89,8 @@ img {
 .team-text,
 .portfolio-text,
 .footer-text,
-.footer-caption {
+.footer-caption,
+.modal-caption {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -674,9 +675,6 @@ img {
 .modal-caption {
   width: 360px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
   margin: 72px 24px 16px;
@@ -768,19 +766,61 @@ img {
 .modal-form-agremeent-text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  user-select: none;
 }
 
 .modal-form-checkbox {
-  border-radius: 2px;
+  position: relative;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+
+  fill: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border, background-color, fill;
+}
+
+input[type='checkbox']:checked
+  + .modal-form-agremeent-text
+  > .modal-form-checkbox {
+  border: none;
+  background-color: #404bbf;
+  fill: #f4f4fd;
 }
 
 .modal-form-checkbox-icon {
+  opacity: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity;
 }
+
+input[type='checkbox']:checked
+  + .modal-form-agremeent-text
+  > .modal-form-checkbox
+  > .modal-form-checkbox-icon {
+  opacity: 1;
+}
+input[type='checkbox']:focus-visible
+  + .modal-form-agremeent-text
+  > .modal-form-checkbox {
+  outline: 2px solid #404bbf;
+  outline-offset: 2px;
+}
+
 .modal-form-agremeent-link {
+  text-decoration: underline;
+  color: #4d5ae5;
 }
 
 .button-accent {
