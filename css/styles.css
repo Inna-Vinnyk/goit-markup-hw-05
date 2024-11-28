@@ -734,6 +734,9 @@ img {
 .modal-form-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
+.modal-comment {
+  margin-bottom: 16px;
+}
 
 .modal-form-comment {
   width: 100%;
