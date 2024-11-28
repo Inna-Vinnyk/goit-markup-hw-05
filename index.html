@@ -61,7 +61,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-titel">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="btn hero-button" type="button">Order Service</button>
         </div>
       </section>
 
@@ -446,7 +446,7 @@
           </p>
         </div>
         <div class="footer-social">
-          <p class="footer-social-text">Social media</p>
+          <p class="footer-caption">Social media</p>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a
@@ -505,24 +505,25 @@
         </div>
 
         <div class="footer-subscribe">
-          <p class="footer-subscribe-caption">Subscribe</p>
-          <div class="footer-subscribe-wrapper">
-            <input
-              class="footer-input"
-              type="email"
-              name="email"
-              placeholder="Email"
-            />
+          <p class="footer-caption">Subscribe</p>
+          <form class="footer-form" name="subscribe">
+            <label class="footer-form-label footer-caption" for="email">
+              <input
+                class="footer-form-input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </label>
 
-            <div class="footer-button-wrapper">
-              <button class="footer-button" type="submit">Subscribe
-                <svg class="footer-button-icon" width="24" height="20">
+            <button class="btn footer-button" type="submit"
+              >Subscribe
+              <svg class="footer-button-icon" width="24" height="20">
                 <use href="./images/icons.svg#icon-send"></use>
-              </button>
-              
               </svg>
-            </div>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -620,7 +621,7 @@
             </label>
           </div>
 
-          <button class="button button-accent" type="submit">Send</button>
+          <button class="btn button-accent" type="submit">Send</button>
         </form>
       </div>
     </div>

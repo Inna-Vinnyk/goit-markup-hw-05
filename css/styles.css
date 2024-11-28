@@ -47,6 +47,7 @@ a {
 
 button {
   border: none;
+  padding: 0;
   cursor: pointer;
 }
 
@@ -88,7 +89,7 @@ img {
 .team-text,
 .portfolio-text,
 .footer-text,
-.footer-social-text {
+.footer-caption {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -110,6 +111,32 @@ img {
 }
 .social-icons {
   fill: #f4f4fd;
+}
+
+.btn {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+
+  min-width: 165px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #404bbf;
 }
 
 /* #endregion */
@@ -485,7 +512,7 @@ img {
   margin-right: 80px;
 }
 
-.footer-social-text {
+.footer-caption {
   font-weight: 500;
   color: #fff;
   margin-bottom: 16px;
@@ -512,75 +539,51 @@ img {
 }
 
 .footer-subscribe {
-  /* display: flex;
-  align-items: baseline;
-  gap: 24px;
- */
-  max-width: 453px;
-  height: 80px;
-}
-.footer-subscribe-caption {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.footer-subscribe-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 16px;
+  margin-left: auto;
 }
 
-.footer-input {
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-form-label {
+  margin-bottom: 0;
+}
+
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+
+  padding-left: 16px;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
   border: 1px solid #fff;
   border-radius: 4px;
-  max-width: 264px;
-  height: 40px;
-  padding: 8px 16px;
-  background-color: #2e2f42;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+}
 
+.footer-form-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
-}
-.footer-button-wrapper {
+  color: #ffffff;
 }
 
 .footer-button {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 16px;
-
-  position: relative;
-  border-radius: 4px;
-  padding: 8px 24px;
-  margin-right: 16px;
-  width: 165px;
+  align-items: center;
   height: 40px;
-  background-color: #4d5ae5;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #fff;
 }
-.footer-button-icon {
-  position: absolute;
-  bottom: 50%;
-  margin: 0 auto 0 16px;
 
-  transform: translateY(50%);
+.footer-button-icon {
+  margin-left: 16px;
   fill: #fff;
 }
 /* #endregion */
